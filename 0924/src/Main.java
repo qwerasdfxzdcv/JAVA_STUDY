@@ -15,11 +15,11 @@ public class Main {
         System.out.println(person.toCustumString());
         person.print();
 
-        Food food = new Food();
-        food.name = "햄버거";
-        food.price = 5600;
-        food.jaeryu = new String[] {"빵", "패티", "샐러드"};
-        food.print();
+//        Food food = new Food();
+//        food.name = "햄버거";
+//        food.price = 5600;
+//        food.jaeryu = new String[] {"빵", "패티", "샐러드"};
+//        food.print();
 
         Team team = new Team();
         team.goal = "착하게 살자";
