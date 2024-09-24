@@ -26,6 +26,7 @@ public class Main {
         Person2 p1 = new Person2("김",18);
         Person2 p2 = new Person2("박");
         Person2 p3 = new Person2(20);
+        Person2 p4 = new Person2("김",18);
         //기본생성자를 사용하면 아래처럼 하나하나 넣어줘야함
         /*p1.name = "김";
         p1.age = 18;
@@ -40,5 +41,7 @@ public class Main {
         team.memberAdd(p); // 이현숙(26)을 추가
         team.memberRemove("김"); //이름이"김"인 멤버를 삭제
         team.print();
+        System.out.println(p1.equals(p2));
+        System.out.println(p1.equals(p4));
     }
 }

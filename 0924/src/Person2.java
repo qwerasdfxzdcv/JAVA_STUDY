@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Person2 {
     String name;
     int age;
@@ -7,6 +9,20 @@ public class Person2 {
         this.age = age;
     }
     //이미 존재하는것을 바꾸는 것을 overriding 이라고 함
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person2 person2 = (Person2) o;
+        return age == person2.age && Objects.equals(name, person2.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
     @Override
     public String toString() { //이미 존재하던 toString 을 바꾼 것
         return "이름 : " + name + "(" + age + ")";
