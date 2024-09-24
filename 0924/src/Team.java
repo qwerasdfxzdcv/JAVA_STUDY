@@ -27,7 +27,7 @@ public class Team {
         System.out.print("팀원은" );
         for(int i = 0; i < members.length; i++){
             if(members[i] != null){
-                System.out.print(" " + members[i].name + "(" + members[i].age + "),");
+                System.out.print(" " + members[i].name + "(" + members[i].age + ")");
             }
         }
         System.out.println("입니다.");
