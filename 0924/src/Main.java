@@ -1,4 +1,7 @@
-import java.lang.reflect.Member;
+import franchise.Food;
+import team.Person;
+import team.Person2;
+import team.Team;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +9,7 @@ public class Main {
         //String[] names = {"우재남","서종호","김석필"};
         //int[] ages = {30,23}; 이런식으로 적으면 각각의 나이를 알수가 없음
         //Integer[] ages = {30, 23, null};
-        //기본형 int가 아닌 참조형 Integer로 선언시 null사용 가능
+        //기본형 int 가 아닌 참조형 Integer 로 선언시 null 사용 가능
         Person person = new Person();
         person.name = "최승혁";
         person.age = 19;

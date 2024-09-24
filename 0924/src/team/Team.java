@@ -1,9 +1,9 @@
-//팀원은 4명까지, 팀명은 아메리카노, 팀의목표는 "착하게 살자"
+package team;//팀원은 4명까지, 팀명은 아메리카노, 팀의목표는 "착하게 살자"
 
 public class Team {
-    Person2[] members = new Person2[4];
-    String teamName;
-    String goal;
+    public Person2[] members = new Person2[4];
+    public String teamName;
+    public String goal;
     //멤버 추가
     public void memberAdd(Person2 member) {
             for (int i = 0; i < members.length; i++) {

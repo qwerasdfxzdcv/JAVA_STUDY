@@ -1,3 +1,5 @@
+package team;
+
 import java.util.Objects;
 
 public class Person2 {
@@ -25,7 +27,7 @@ public class Person2 {
 
     @Override
     public String toString() {
-        return "Person2{" +
+        return "team.Person2{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
