@@ -43,5 +43,6 @@ public class Main {
         team.print();
         System.out.println(p1.equals(p2));
         System.out.println(p1.equals(p4));
+        System.out.println(p1); // p1.toString()으로 자동실행
     }
 }
