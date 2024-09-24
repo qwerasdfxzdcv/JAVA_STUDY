@@ -52,5 +52,6 @@ public class Main {
         p0.sound();
         Cat cat = new Cat("야옹",1);
         cat.sound();
+        System.out.println(p0);
     }
 }
