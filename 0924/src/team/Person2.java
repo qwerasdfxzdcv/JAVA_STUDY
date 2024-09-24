@@ -3,8 +3,8 @@ package team;
 import java.util.Objects;
 
 public class Person2 {
-    final String name;
-    int age;
+    public String name;
+    public int age;
     //생성자(constructor) 직접 만들기
     public Person2(String name, int age) {
         this.name = name;

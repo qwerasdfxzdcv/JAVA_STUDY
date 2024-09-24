@@ -1,4 +1,3 @@
-import franchise.Food;
 import team.Person;
 import team.Person2;
 import team.Team;
@@ -11,8 +10,8 @@ public class Main {
         //Integer[] ages = {30, 23, null};
         //기본형 int 가 아닌 참조형 Integer 로 선언시 null 사용 가능
         Person person = new Person();
-        person.name = "최승혁";
-        person.age = 19;
+        person.setName("최승혁");
+        person.setAge(19);
         //아래 두줄은 같은방식으로 출력됨
         System.out.println(person.toCustumString());
         person.print();
@@ -31,16 +30,18 @@ public class Main {
         Person2 p3 = new Person2(20);
         Person2 p4 = new Person2("김",18);
         //기본생성자를 사용하면 아래처럼 하나하나 넣어줘야함
-        /*p1.name = "김";
+        /*
+        p1.name = "김";
         p1.age = 18;
         p2.name = "박";
         p2.age = 19;
         p3.name = "최";
-        p3.age = 20;*/
+        p3.age = 20;
+        */
         team.members = new Person2[]{p1, p2, p3, null};
         Person2 p = new Person2("이현숙",26);
-        //p.name = "이현숙";
-        //p.age = 26;
+        p.name = "이현숙";
+        p.age = 26;
         team.memberAdd(p); // 이현숙(26)을 추가
         team.memberRemove("김"); //이름이"김"인 멤버를 삭제
         team.print();
