@@ -1,7 +1,5 @@
 import franchise.Food;
-import team.Person;
-import team.Person2;
-import team.Team;
+import team.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,5 +47,10 @@ public class Main {
         System.out.println(p1.equals(p2));
         System.out.println(p1.equals(p4));
         System.out.println(p1); // p1.toString()으로 자동실행
+        Person3 p0 = new Person3("뿡",22);
+        System.out.println(p0.getName()+"("+p0.getAge()+")");
+        p0.sound();
+        Cat cat = new Cat("야옹",1);
+        cat.sound();
     }
 }
