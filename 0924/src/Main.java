@@ -1,9 +1,11 @@
+import java.lang.reflect.Member;
+
 public class Main {
     public static void main(String[] args) {
         //우재남, 서종호, 김석필 이름과 각각의 나이 30, 23, 비공개
-        String[] names = {"우재남","서종호","김석필"};
+        //String[] names = {"우재남","서종호","김석필"};
         //int[] ages = {30,23}; 이런식으로 적으면 각각의 나이를 알수가 없음
-        Integer[] ages = {30, 23, null};
+        //Integer[] ages = {30, 23, null};
         //기본형 int가 아닌 참조형 Integer로 선언시 null사용 가능
         Person person = new Person();
         person.name = "최승혁";
@@ -17,5 +19,25 @@ public class Main {
         food.price = 5600;
         food.jaeryu = new String[] {"빵", "패티", "샐러드"};
         food.print();
+
+        Team team = new Team();
+        team.goal = "착하게 살자";
+        team.teamName = "아메리카노";
+        Person2 p1 = new Person2();
+        Person2 p2 = new Person2();
+        Person2 p3 = new Person2();
+        p1.name = "김";
+        p1.age = 18;
+        p2.name = "박";
+        p2.age = 19;
+        p3.name = "최";
+        p3.age = 20;
+        team.members = new Person2[]{p1, p2, p3, null};
+        Person2 p = new Person2();
+        p.name = "이현숙";
+        p.age = 26;
+        team.memberAdd(p); // 이현숙(26)을 추가
+        team.memberRemove("김"); //이름이"김"인 p1 삭제
+        team.print();
     }
 }
