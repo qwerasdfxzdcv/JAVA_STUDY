@@ -2,9 +2,7 @@ import gtest.Food;
 import gtest.Order;
 import gtest.Product;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,7 +40,7 @@ public class Main {
         list.add(9);
         list.add(5);
         list.add(4);
-        list.add(2);
+        list.add(-2);
         int target = 9;
         int[] answer = new int[2];
     /*  시간복잡도가 구리다 못해 똥냄새나는 이중 for 문
@@ -60,23 +58,36 @@ public class Main {
     */
         //"1 <= list 안의 수 <= 10, answer 는 순서를 보장하지 않음"이라는 추가 조건
         Integer[] tmp = new Integer[11];
-        for(int i=0;i<list.size();i++) {
-            int num = list.get(i);
-            if(tmp[num] == null) tmp[num] = i;
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i< list.size();i++){
+            map.put(list.get(i),i);
         }
-        for(int i=1;i<tmp.length;i++) {
-            if(tmp[i]==null)continue;
-            if(tmp[target-i]!=null){
-                if(tmp[i]>tmp[target-i]){
-                    answer[0] = target-i;
-                    answer[1] = i;
-                }
-                else{
-                    answer[1] = target-i;
-                    answer[0] = i;
-                }
+        for(Integer key : map.keySet()){
+            if(map.containsKey(target-key)){
+                int a = map.get(key);
+                int b = map.get(target-key);
+                answer[0] = list.get(a);
+                answer[1] = list.get(b);
             }
         }
+//        for(int i=0;i<list.size();i++) {
+//            int num = list.get(i);
+//            if(tmp[num] == null) tmp[num] = i;
+//        }
+//        for(int i=1;i<tmp.length;i++) {
+//            if(tmp[i]==null)continue;
+//            if(tmp[target-i]!=null){
+//                if(tmp[i]>tmp[target-i]){
+//                    answer[0] = target-i;
+//                    answer[1] = i;
+//                }
+//                else{
+//                    answer[1] = target-i;
+//                    answer[0] = i;
+//                }
+//            }
+//        }
+//        System.out.println(Arrays.toString(tmp));
         System.out.println(Arrays.toString(answer));
     }
 }
