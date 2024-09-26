@@ -1,5 +1,5 @@
 package global;
-import Cafe.Coffee;
+import cafe.Coffee;
 
 public class Data {
     public static Coffee[] coffees = new Coffee[5];

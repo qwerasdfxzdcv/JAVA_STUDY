@@ -1,4 +1,4 @@
-package Cafe;
+package cafe;
 
 public enum SeasonType {
     봄("따뜻"),
