@@ -12,9 +12,7 @@ public class CafeMain {
         int c = Integer.parseInt(sc.nextLine());
         if(c==1){
             cafeController1 = CafeController.getInstance();
-            for (int i = 0; i < coffees.length; i++) {
-                cafeController1.addCoffee(i);
-            }
+                cafeController1.addCoffee();
         }
 
         // 만약 위에서 1을 입력하고 또 입력한다 했을 경우
@@ -23,9 +21,7 @@ public class CafeMain {
         int c1 = Integer.parseInt(sc.nextLine());
         if(c1==2){
             cafeController2 = CafeController.getInstance(); // 위에서 썼던 cafeController1과 똑같은 곳에서 불러와다 cafeController2에 집어넣음?
-            for (int i = 0; i < coffees.length; i++) {
-                cafeController2.addCoffee(i);
-            }
+                cafeController2.addCoffee();
         }
 
         for(Coffee coffee : coffees) System.out.println(coffee);
